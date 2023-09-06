@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Website - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+
+<body id="home-page">
+    <div id="sidemenu" class="sidemenu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+
+        <div class="menu-container" id="projects-container">
+            <a href="projects/index.html" class="nav-item"><i class="fas fa-briefcase"></i> Projects</a>
+            <div id="projects-secondary-sidemenu" class="secondary-sidemenu">
+                <a href="projects/index_p1.html" class="second-nav-item">Quantum Gravity and Foundations</a>
+                <a href="projects/index_p2.html" class="second-nav-item">BHM and Quantum many-body physics</a>
+                <a href="projects/index_p3.html" class="second-nav-item">Optimizing 2PISC Model via CNNs</a>
+                <a href="projects/index_p4.html" class="second-nav-item">Forex/index Forcasting Using LLMs</a>
+            </div>
+        </div>
+        
+        <a href="about_me/index.html" class="nav-item"><i class="fas fa-user"></i> About</a>
+        
+        <!-- Container for CV -->
+        <div class="menu-container" id="cv-container">
+            <a href="CV/index.html" class="nav-item"><i class="fas fa-file-alt"></i> Resume</a>
+            <div id="cv-secondary-sidemenu" class="secondary-sidemenu">
+                <a href="CV/CV.pdf" target="_blank" class="second-nav-item"><i class="fas fa-download"></i> CV</a>
+                <a href="CV/index.html#publications" class="second-nav-item"><i class="fas fa-book"></i> Publications</a>
+                <a href="CV/index.html#awards" class="second-nav-item"><i class="fas fa-trophy"></i> Awards</a>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <header id="header">
+        <nav class="navbar nav-transparent">
+            <div class="navbar-left">
+                <a href="index.html" class="navbar-left">
+                    <img src="profile.jpg" alt="Profile Picture" class="profile-pic"> ALI MOKHTARI</a>
+            </div>
+            <button class="navbar-toggler" type="button" onclick="openNav()">
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+            </button>
+            <div class="navbar-right-and-search">
+                <div class="navbar-right">
+                    <a href="index.html" class="active">Home</a>
+                    <div class="dropdown">
+                        <a href="projects/index.html">Projects</a>
+                        <div class="dropdown-content dropdown-content-1">
+                            <a href="projects/index_p1.html">Quantum Gravity and Foundations</a>
+                            <a href="projects/index_p2.html">BHM and Quantum many-body physics</a>
+                            <a href="projects/index_p3.html">Optimizing 2PISC Model via CNNs</a>
+                            <a href="projects/index_p4.html">Forex/index Forcasting Using LLMs</a>
+                        </div>
+                    </div>
+                    <a href="about_me/index.html">About me</a>
+                    <div class="dropdown">
+                        <a href="CV/index.html">Resume</a>
+                        <div class="dropdown-content dropdown-content-2">
+                            <a href="CV/CV.pdf" target="_blank">Download CV</a>
+                            <a href="CV/index.html#publications">Publications</a>
+                            <a href="CV/index.html#awards">Awards</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-search">
+                    <a href="#" class="search-icon">🔍</a>
+                </div>
+            </div>
+            <form id="searchForm" style="display: none;">
+                <input type="search" id="searchBox" placeholder="Search here..." />
+            </form>
+        </nav>
+        <a href="https://www.nasa.gov/webbfirstimages" class="header-image-credit searchable-item">Image from James Webb Space Telescope</a>
+
+        <div class="header-container">
+            <div class="header-text  searchable-item">
+              Ali Mokhtari <br>
+              Theoretical physicist and AI researcher <br>
+              Ph.D. Candidate at Simon Fraser University
+            </div>
+          </div>          
+    </header>
+    
+    <div class="content-container-Home">
+        <section id="project1">
+            <h2 class="searchable-item">Who am I?</h2>
+            <p class="searchable-item">
+
+                I am currently a Ph.D. student and research assistant at Simon Fraser University under the supervision of Professor
+                <strong> <a href="http://www.sfu.ca/~malcolmk/" target="_blank">Malcolm Kennett</a></strong>. 
+            </p>
+            <p class="searchable-item">
+                My research interests are pretty 
+                broad, covering a range of scientific and intellectual domains. In Physics, my main interests are Quantum Foundations, 
+                Quantum Gravity, Quantum Information,  and Quantum Many-Body Physics. Artificial Intelligence also fascinates me, 
+                particularly Machine Learning and Deep Neural Networks. I am equally captivated by the intersections between Economics 
+                and Complex Systems, especially in the context of Many-Body Physics. Last but not least, Philosophy and Logic are topics 
+                I would like to study, think about, and discuss with others.
+            </p>
+            <p class="searchable-item">
+                If any of these areas intrigue you as much as they do me, I'd love to connect and explore these topics further. Feel free to get in touch!
+            </p>
+        </section>
+    </div> 
+    <footer>
+        <ul class="social-links">
+            <li><a href="mailto:ali.mokhtari.jazi@gmail.com"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/ali-mokhtari-131230208/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/AliMokhtariJazi"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://scholar.google.com/citations?user=Nqk-QFoAAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a></li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

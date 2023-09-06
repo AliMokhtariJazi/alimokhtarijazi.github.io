@@ -1,0 +1,567 @@
+html {
+  font-size: 16px; /* This is your base font size */
+  overflow-y: scroll;
+
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff);
+  background-color: rgb(64, 57, 57);
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3.875rem;
+  padding: 0rem; /* No padding */
+  margin: 0rem; /* No margin */
+  text-align: right;
+  z-index: 20;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav a {
+color: white;
+padding: 1.25rem;
+text-decoration: none;
+transition: background-color 0.3s ease-in-out;
+display: inline-block;
+}
+
+/* Styles for nav-transparent */
+nav.nav-transparent {
+background-color: rgba(231, 231, 231, 0.338);
+}
+
+nav.nav-transparent a,
+nav.nav-transparent .dropdown-content a {
+color: rgb(0, 0, 0);
+}
+
+nav.nav-transparent .dropdown-content {
+background-color: rgba(222, 222, 222, 0.905);
+}
+
+nav.nav-transparent .navbar-left {
+color: rgb(0, 0, 0);
+}
+
+/* Styles for nav-solid */
+nav.nav-solid {
+background-color: black;
+}
+
+nav.nav-solid a,
+nav.nav-solid .dropdown-content a {
+color: white;
+}
+
+nav.nav-solid .dropdown-content {
+background-color: black;
+}
+
+nav.nav-solid .navbar-left {
+color: white;
+}
+
+nav a.active {
+font-weight: 900;
+}
+
+.navbar-left {
+float: left;
+line-height: 0rem;
+padding: 0.1875rem 0rem 0rem 1.875rem;
+font-size: 1.25rem;
+font-weight: bold;
+display: flex;
+align-items: center;
+}
+
+.profile-pic {
+width: 3.125rem;
+height: 3.125rem;
+border-radius: 10%;
+margin-right: 0.625rem;
+}
+
+nav a:hover {
+color: rgb(160, 160, 160) !important;
+font-weight: bold !important;
+}
+
+.dropdown:hover > a {
+color: rgb(160, 160, 160) !important;
+font-weight: bold !important;
+}
+
+.dropdown:hover::after {
+font-size: 0.75rem;
+margin-left: 0.3125rem;
+}
+
+.dropdown-content a:hover {
+color: rgb(143, 141, 141) !important;
+font-weight: bold !important;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.nav-color-change a {
+color: white !important;
+}
+
+.nav-color-change .dropdown-content a {
+color: white !important;
+font-weight: normal !important;
+}
+
+.nav-color-change a:hover,
+.nav-color-change .dropdown-content a:hover {
+color: rgb(84, 84, 84) !important;
+font-weight: bold !important;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #78787896;
+box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.4);
+padding: 0;
+text-align: left;
+border-radius: 0rem;
+z-index: 1;
+transition: background-color 0.3s ease-in-out;
+}
+
+
+.dropdown-content-1 {
+min-width: 21rem; /* set width as needed */
+}
+
+.dropdown-content-2 {
+min-width: 8.75rem; /* set width as needed */
+}
+
+
+
+.dropdown-content a {
+color: black;
+padding: 0.75rem 1rem;
+text-decoration: none;
+display: block;
+border-bottom: none;
+transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover {
+color: rgb(143, 141, 141) !important;
+font-weight: bold !important;
+background-color: transparent !important;
+transition: color 0.3s ease-in-out;
+}
+
+
+footer {
+background-color: #c4c4c4;  
+color: white;
+text-align: center;
+padding: 0;
+height: 3.75rem; /* Adjust the height value to decrease the height */
+position: fixed;
+bottom: 0rem;
+width: 100%;
+}
+
+footer .social-links {
+display: flex;
+list-style: none;
+justify-content: center;
+}
+
+footer .social-links li {
+margin: 0rem 1.25rem;
+}
+
+footer .social-links li:first-child {
+margin-left: 0rem;
+}
+
+footer .social-links li:last-child {
+margin-right: 0rem;
+}
+
+footer .social-links a {
+color: blue;
+font-size: 1.5rem; /* Adjust the font-size value to increase the icon size */
+}
+
+
+#searchForm {
+display: none; /* Initially hidden */
+position: fixed; /* Fixed position */
+top: 3.75rem; /* Position it right under the navbar */
+left: 0rem; /* Align it to the left */
+width: 100%; /* Full width */
+height: 3.125rem; /* Set the height */
+box-shadow: 0rem 0.5rem 1rem 0rem rgba(91, 91, 91, 0.862); /* Adds a bit of shadow */
+z-index: 30; /* This ensures that the search bar appears above other content */
+}
+
+#searchForm input[type='search'] {
+width: 100%; /* Full width */
+height: 3.125rem; /* Set the height */
+border: none; /* Removes the border */
+padding: 0rem 3.75rem; /* Adds some padding */
+font-size: 1.25rem; /* Adjust as needed */
+background-color: rgba(196, 196, 196, 0.582); /* Gray and a bit transparent */
+}
+
+.search-icon {
+padding-right: 3.125rem; /* Adjust as needed */
+}
+
+
+
+.navbar-right-and-search {
+  display: flex;
+  justify-content: flex-end; /* This will push all content to the right */
+  align-items: center; /* Vertically center aligned */
+}
+
+.search-icon {
+  display: inline-block;
+}
+
+.toggler-icon,
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  display: block;
+  background: #000000;
+  height: 2px; /* Adjust thickness here */
+  width: 24px; /* Adjust width here */
+  margin: 6px auto; /* Adjust margin for spacing */
+}
+
+
+
+
+section {
+  padding: 3rem;
+  margin: 0rem;
+}
+
+section img {
+  float: right;
+  margin-left: 3.75rem; 
+  width: 34.6875rem;
+}
+section p  {
+  text-align: justify;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  font-size: 1.1rem;
+}
+
+section ul {
+  text-align: justify;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  font-size: 1.1rem;
+}
+
+section ol {
+  text-align: justify;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  font-size: 1.1rem;
+}
+
+section h2 {
+  margin-left: 7rem;
+  margin-right: 7rem;
+  font-size: 1.4rem;
+} 
+
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+  section {
+    padding: 1rem;
+    margin: 0rem;
+  }
+  section p {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    font-size: 1rem;
+  }
+  section ul {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    font-size: 1rem;
+  }
+  section ol {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    font-size: 1rem;
+  }
+  section h2 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    font-size: 1.3rem;
+  } 
+  section img {
+    float: right;
+    margin-left: 1rem; 
+    width: 34.6875rem;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  section {
+    padding: 1rem;
+    margin: 0rem;
+  }
+  section p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+  }
+  section ul {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+  }
+  section ol {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+  }
+  section h2 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+  } 
+  section img {
+    float: right;
+    margin-left: 1rem; 
+    width: 34.6875rem;
+  }
+}
+
+.content-container-About_me {
+  padding-top: 3.875rem;
+  padding-bottom: 4rem;
+}
+
+.content-container-Projects {   
+  padding-top: 3.875rem;
+  padding-bottom: 4rem;
+}
+
+.content-container-CV {
+  padding-top: 3.875rem;
+  padding-bottom: 4rem;
+}
+
+
+
+#CV {
+  background-color: rgba(222, 230, 231, 0.903);
+  color: rgba(0, 0, 0, 0.824);
+}
+#publications {
+  background-color: rgba(236, 245, 246, 0.903);
+  color: rgba(0, 0, 0, 0.824);
+}
+#awards {
+  background-color: rgb(222, 230, 231, 0.903);
+  color: black;
+}
+
+
+
+#project1 {
+  background-color: rgb(230, 230, 230);
+  color: rgba(0, 0, 0, 0.824);
+} 
+#project2 {
+  background-color: rgb(230, 230, 230);
+  color: black;
+}
+#project3 {
+  background-color: rgb(230, 230, 230);
+  color: rgb(0, 0, 0);
+}
+#project4 {
+  background-color: rgb(230, 230, 230);
+  color: rgb(0, 0, 0);
+}
+
+
+#About-me-project{
+  background-color: rgb(237, 237, 250);
+  color: rgb(0, 0, 0);
+}
+
+
+.navbar-toggler {
+  border: none;  /* Removes border */
+  box-shadow: none;  /* Removes shadow */
+  display: none;
+  cursor: pointer;
+  background: transparent;
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 32;
+}
+
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 800px) {
+  .content-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  nav {
+    align-items: center;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-left {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-right,
+  .navbar-right a,
+  .navbar-right .dropdown {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .navbar-search .search-icon {
+    display: inline-block; 
+  }
+}
+
+/* Highlighted text */
+mark {
+  background-color: rgb(201, 215, 219);
+  color: black;
+}
+
+/* Generic Sidemenu Styles */
+.sidemenu, .secondary-sidemenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: all 0.5s ease-in-out;
+  padding-top: 4rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sidemenu { left: 0; }
+.secondary-sidemenu {
+  height: 100%;
+  width: auto;  /* Automatically adjust to content width */
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 30%;  /* Adjust based on your layout */
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 4rem;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* When the second sidebar opens */
+.sidemenu-open-secondary {
+  opacity: 1;
+  visibility: visible;
+  width: auto;
+}
+
+/* Links inside sidemenu */
+.sidemenu a, .secondary-sidemenu a {
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #818181;
+  display: block;
+  transition: color 0.3s;
+}
+
+/* Hover effect for links */
+.sidemenu a:hover, .secondary-sidemenu a:hover {
+  color: #f1f1f1;
+}
+
+/* Close button styles */
+.sidemenu .closebtn, .secondary-sidemenu .closebtn {
+  position: absolute;
+  top: 0;
+  left: 0.7rem;
+  font-size: 2.25rem;
+  cursor: pointer;
+}
+
+/* Navigation item styles */
+.nav-item, .second-nav-item {
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 0.5s;
+}
+
+/* When the first sidebar is open */
+.sidemenu-open-main,
+.sidemenu-open-secondary {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidemenu-open-main .nav-item,
+.sidemenu-open-secondary .second-nav-item {
+  opacity: 1;
+}
+
+.sidemenu-open-main { width: 30%; }
+
+
+

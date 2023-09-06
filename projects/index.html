@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Website - Research Interests</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body id="other-page">
+    <div id="sidemenu" class="sidemenu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+        <div class="menu-container" id="projects-container">
+            <a href="../projects/index.html" class="nav-item" id="projects-item"><i class="fas fa-briefcase"></i> Projects</a>
+            <div id="projects-secondary-sidemenu" class="secondary-sidemenu">
+                <a href="../projects/index_p1.html" class="second-nav-item">Quantum Gravity and Foundations</a>
+                <a href="../projects/index_p2.html" class="second-nav-item">BHM and Quantum many-body physics</a>
+                <a href="../projects/index_p3.html" class="second-nav-item">Optimizing 2PISC Model via CNNs</a>
+                <a href="../projects/index_p4.html" class="second-nav-item">Forex/index Forcasting Using LLMs</a>
+            </div>
+        </div>
+        <a href="../about_me/index.html" class="nav-item"><i class="fas fa-user"></i> About</a>
+        <div class="menu-container" id="cv-container">
+            <a href="../CV/index.html" class="nav-item" id="cv-item"><i class="fas fa-file-alt"></i> Resume</a>
+            <div id="cv-secondary-sidemenu" class="secondary-sidemenu">
+                <a href="../CV/CV.pdf" target="_blank" class="second-nav-item"><i class="fas fa-download"></i> CV</a>
+                <a href="../CV/index.html#publications" class="second-nav-item"><i class="fas fa-book"></i> Publications</a>
+                <a href="../CV/index.html#awards" class="second-nav-item"><i class="fas fa-trophy"></i> Awards</a>                
+            </div>
+        </div>
+    </div>
+    
+    <header id="header">
+        <nav class="navbar nav-transparent">
+            <div class="navbar-left">
+                <a href="../index.html" class="navbar-left">
+                    <img src="../profile.jpg" alt="Profile Picture" class="profile-pic"> ALI MOKHTARI</a>
+            </div>
+            <button class="navbar-toggler" type="button" onclick="openNav()">
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+            </button>
+            <div class="navbar-right-and-search">
+            <div class="navbar-right">
+                <a href="../index.html">Home</a> 
+                <div class="dropdown">
+                    <a href="index.html" class="active">Projects</a>
+                    <div class="dropdown-content dropdown-content-1">
+                        <a href="index_p1.html">Quantum Gravity and Foundations</a>
+                        <a href="index_p2.html">BHM and Quantum many-body physics</a>
+                        <a href="index_p3.html">Optimizing 2PISC Model via CNNs</a>
+                        <a href="index_p4.html">Forex/index Forcasting Using LLMs</a>
+                    </div>
+                </div> 
+                <a href="../about_me/index.html">About me</a> 
+                <div class="dropdown">
+                    <a href="../CV/index.html">Resume</a>
+                    <div class="dropdown-content dropdown-content-2">
+                        <a href="../CV/CV.pdf" target="_blank">Download CV</a>
+                        <a href="../CV/index.html#publications">Publications</a>
+                        <a href="../CV/index.html#awards">Awards</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-search">
+                <a href="#" class="search-icon">🔍</a>
+            </div>
+        </div>
+        <form id="searchForm" style="display: none;">
+            <input type="search" id="searchBox" placeholder="Search here..." />
+        </form>
+    </nav>
+    </header>
+
+    <div class="content-container-Projects">
+        <section id="project1">
+            <h2 class="searchable-item">
+                <a href="index_p1.html">Quantum Gravity and Foundations</a>
+            </h2>
+            <p class="searchable-item">
+                The pursuit of a unified theory that combines general relativity and quantum mechanics into quantum gravity has been ongoing for years, yet 
+                a definitive solution eludes scientists. Various approaches, such as String Theory and Loop Quantum Gravity, have their own merits but also 
+                come with critical shortcomings. String Theory, although mathematically elegant, adds extra dimensions that are not empirically verifiable, 
+                making it speculative at best. Loop Quantum Gravity, meanwhile, succeeds in quantizing the geometry of space-time but has difficulties in 
+                incorporating matter fields or aligning with the Standard Model of particle physics. These and other issues prevent any single approach 
+                from being universally accepted as a complete theory of quantum gravity.
+            </p>
+            <p class="searchable-item"> 
+                Similarly, foundational problems in quantum mechanics remain a subject of debate and confusion. Issues like the measurement problem, the 
+                nature of wave-function collapse, and the enigma of quantum entanglement have led to numerous interpretations. Among them are the Copenhagen 
+                interpretation, the Many-Worlds interpretation, and the de Broglie-Bohm theory. Each presents a different take on what quantum mechanics 
+                means on a fundamental level but comes with its own set of limitations, be it philosophical or empirical. As of now, none of these 
+                interpretations have been universally adopted, nor have they been integrated into a comprehensive understanding of quantum mechanics.
+            </p>
+        </section>
+    
+        <section id="project2">
+            <h2 class="searchable-item">
+                <a href="index_p2.html">BHM and Quantum many-body physics</a>
+            </h2>
+            <p class="searchable-item"> 
+                The Bose-Hubbard Model (BHM) is a cornerstone in the study of quantum many-body physics, offering invaluable insights into the behavior of
+                interacting bosonic particles in lattice systems. This model captures the essence of the competition between kinetic energy, represented by
+                the hopping of particles between adjacent sites, and interaction energy due to on-site interactions. While the basic BHM serves as a simplified
+                representation of many quantum systems, including cold atomic gases in optical lattices, it has been extended to include various complexities
+                such as disorder. The disordered Bose-Hubbard model introduces an element of randomness in the system, affecting both equilibrium and
+                out-of-equilibrium behaviors. This added layer allows for the exploration of phenomena like many-body localization, Bose-glass phases,
+                and dynamical transitions, expanding our understanding of strongly correlated systems.
+            </p>
+            <p class="searchable-item"> 
+                The potential of BHM in both equilibrium and out-of-equilibrium scenarios is immense. In equilibrium states, researchers can use the model to
+                study phase transitions such as the superfluid-to-Mott insulator transition, which has been experimentally observed in cold atom systems.
+                Disorder adds another layer of complexity, allowing for the study of systems that lack translational symmetry. On the other hand,
+                out-of-equilibrium scenarios in the Bose-Hubbard model are crucial for understanding dynamical processes like quench dynamics, where the
+                system is rapidly driven from one state to another, or transport phenomena in disordered systems. Both the clean and disordered versions
+                of the BHM serve as ideal test beds for numerical methods and also find applications in areas like quantum computation and condensed
+                matter physics. As we delve deeper into the quantum realm, the Bose-Hubbard model continues to be a pivotal framework guiding our exploration.
+
+            </p>
+        </section>
+    
+        <section id="project3">
+            <h2 class="searchable-item">
+                <a href="index_p3.html">Optimizing 2PISC Model via CNNs</a>
+            </h2>
+            <p class="searchable-item"> 
+                The 2-Particle Irreducible Strong Coupling (2PISC) approach to the Bose-Hubbard Model has emerged as a highly effective method for studying both 
+                equilibrium and out-of-equilibrium scenarios in quantum many-body systems. This approach excels particularly in the strong coupling regime, 
+                capturing the essence of interacting bosons on a lattice. However, one of its main limitations is its performance in the weak coupling limit, 
+                where traditional methods like exact diagonalization come into play. While exact diagonalization methods are reliable, they can be computationally 
+                intensive and limited to small system sizes.
+            </p>
+            <p class="searchable-item"> 
+                To overcome this limitation, a novel approach has been developed that integrates Convolutional Neural Networks (CNNs) into the 2PISC framework. 
+                By training a deep learning model on data generated through exact diagonalization methods, it is possible to extend the applicability of the 
+                2PISC model to the weak coupling regime as well. CNNs are particularly apt for this task because they are designed to recognize patterns and 
+                features in data, making them ideal for capturing the underlying physics of the system. Once trained, the CNN can predict outcomes for larger 
+                systems and different coupling strengths, significantly speeding up computations and expanding the model's range of applicability. This hybrid 
+                method not only retains the strengths of the 2PISC approach but also leverages the power of deep learning to create a more robust and versatile 
+                tool for studying quantum many-body systems.
+            </p>
+        </section>
+    
+        <section id="project4">
+            <h2 class="searchable-item">
+                <a href="index_p4.html">Forex/index Forcasting Using LLMs</a>
+            </h2>
+            <p class="searchable-item"> 
+                In the fast-paced world of Forex and financial index trading, news analysis remains a crucial component for effective forecasting.
+                While various algorithmic and manual approaches exist to analyze news and its impact on the market, Large Language Models (LLMs)
+                have recently emerged as a game-changing tool in this domain. LLMs are uniquely capable of processing massive amounts of textual 
+                data, including news articles, editorials, and even social media sentiment, at an unprecedented speed and scale. By synthesizing
+                this news-related information, which often includes subtle cues and contexts that are challenging for traditional analytical 
+                models to capture, LLMs can offer a deep, nuanced understanding of how unfolding events may affect market behavior.
+            </p>
+            <p class="searchable-item"> 
+                The strength of LLMs lies in their ability to analyze text in a way that understands the underlying context, sentiment, and potential implications.
+                For instance, an LLM can identify whether a news article about geopolitical tensions is likely to have a bearish or bullish impact on a particular
+                currency pair or index. It can also compare the sentiment of the news with historical data to forecast market reactions. This capability to process
+                and analyze news in real-time offers traders and financial analysts an invaluable tool for making more informed decisions. The adaptive nature of
+                LLMs means they can continuously learn and update their predictive models, staying current with the ever-changing news landscape. While LLMs are
+                not without limitations, such as data privacy concerns or potential biases, their application in news-based Forex and index forecasting represents
+                a significant leap forward in the field.
+            </p>
+        </section>
+    </div>
+    
+
+    <footer>
+        <ul class="social-links">
+            <li><a href="mailto:ali.mokhtari.jazi@gmail.com"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/ali-mokhtari-131230208/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href=" https://github.com/AliMokhtariJazi"><i class="fab fa-github"></i></li>
+            <li><a href="https://scholar.google.com/citations?user=Nqk-QFoAAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a></li>
+
+          </ul>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

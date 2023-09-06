@@ -1,0 +1,579 @@
+html {
+    font-size: 16px; /* This is your base font size */
+    overflow-y: scroll;
+    overflow-y: scroll;
+  }
+
+
+/* General styles for the header */
+header {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 500px; /* Fixed height */
+  padding: 0.625rem 0;
+  text-align: center;
+  background: url(header.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Styles for the text inside the header */
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0.125rem 125rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.header-text h1 {
+  font-size: 2rem;
+}
+
+.header-text p {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+/* Flexbox container to center items */
+.header-container {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Credit for the image in the header */
+.header-image-credit {
+  position: absolute;
+  bottom: 0.625rem;
+  right: 0.625rem; /* adjusted the extreme right value */
+  color: white;
+  text-shadow: 0.125rem 125rem 0.25rem rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+/* Media queries */
+@media only screen and (max-width: 600px) {
+  header {
+    height: 500px; /* Fixed height */
+  }
+
+  .header-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
+  }
+
+  nav a {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    height: 500px;
+  }
+  .header-container {
+    height: 500px;
+  }
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0rem;
+  padding-top: 0rem; 
+  padding-bottom: 3.75rem;/* Adjust this to the height of your navbar */
+  background: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff);
+}
+
+
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3.875rem;
+  padding: 0rem; /* No padding */
+  margin: 0rem; /* No margin */
+  text-align: right;
+  z-index: 20;
+  background-color: rgba(54, 54, 54, 0.4); /* Navbar starts as transparent */
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav a {
+  color: white; /* Navbar content starts as white */
+  padding: 1.25rem; /* Add padding to links */
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  display: inline-block;
+}
+
+
+/* Styles for nav-transparent */
+nav.nav-transparent {
+  background-color: rgba(54, 54, 54, 0.4);
+}
+
+nav.nav-transparent a,
+nav.nav-transparent .dropdown-content a {
+  color: white;
+}
+
+nav.nav-transparent .dropdown-content {
+  background-color: #3b3b3ba9;
+}
+
+nav.nav-transparent .navbar-left {
+  color: white;
+}
+
+/* Styles for nav-solid */
+nav.nav-solid {
+  background-color: black;
+}
+
+nav.nav-solid a,
+nav.nav-solid .dropdown-content a {
+  color: white;
+}
+
+nav.nav-solid .dropdown-content {
+  background-color: black;
+}
+
+nav.nav-solid .navbar-left {
+  color: white;
+}
+
+
+.navbar-left {
+  color: white;
+}
+
+
+
+nav a.active {
+  font-weight: 900;
+}
+
+.navbar-left {
+  float: left; /* Aligns the name to the left side of the navbar */
+  color: rgb(0, 0, 0); /* Sets the text color to white */
+  line-height: rem; /* To vertically align the text */
+  padding: 0.1875rem 0rem 0rem 1.875rem; /* Adjust as needed */
+  font-size: 1.25rem; /* Sets the font size */
+  font-weight: bold; /* Makes the text bold */
+  display: flex; /* Makes the child elements align in a row */
+  align-items: center; /* Vertically centers the child elements */
+}
+
+.profile-pic {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 10%;
+  margin-right: 0.625rem;
+}
+
+
+
+nav a:hover {
+  color: rgb(160, 160, 160) !important;
+  font-weight: bold !important;
+}
+
+.dropdown:hover > a {
+  color: rgb(160, 160, 160) !important;
+  font-weight: bold !important;
+}
+
+.dropdown:hover::after {
+  font-size: 0.75rem; /* Adjust as necessary */
+  margin-left: 0.3125rem; /* Adds some space between the link and the arrow */
+}
+
+.dropdown-content a:hover {
+  color: rgb(143, 141, 141) !important;
+  font-weight: bold !important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-color-change a {
+  color: white !important;
+}
+
+.nav-color-change .dropdown-content a {
+  color: white !important;
+  font-weight: normal !important; /* Make sure the font weight is normal when not hovered */
+}
+
+
+.nav-color-change a:hover, .nav-color-change .dropdown-content a:hover {
+  color: rgb(84, 84, 84) !important; /* Change color to blue when hovered */
+  font-weight: bold !important; /* Make font weight bold when hovered */
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #78787896; /* Change from transparent to white */
+  box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.4);
+  padding: 0rem;
+  text-align: left;
+  border-radius: 0.3125rem;;
+  z-index: 1;
+  transition: background-color 0.3s ease-in-out; /* Transition for smooth color change */
+}
+
+.dropdown-content-1 {
+  min-width: 21rem; /* set width as needed */
+}
+
+.dropdown-content-2 {
+  min-width: 8.75rem; /* set width as needed */
+}
+
+.dropdown-content a {
+  color: black; /* Initial color of the links */
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  border-bottom: none; 
+  transition: background-color 0.3s ease-in-out; /* Transition for smooth color change */
+}
+
+.dropdown-content a:hover {
+  color: rgb(143, 141, 141) !important;  /* Change color on hover */
+  font-weight: bold !important; /* Make font weight bold when hovered */
+  background-color: transparent !important; /* Keep background transparent on hover */
+  transition: color 0.3s ease-in-out; /* Transition only color for smooth effect */
+}
+
+
+section {
+  padding: 3rem;
+  margin: 0rem;
+}
+section img {
+  float: right;
+  margin-left: 3.75rem; 
+  width: 34.6875rem;
+}
+section p  {
+  text-align: justify;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  font-size: 1.1rem;
+}
+section h2 {
+  margin-left: 10rem;
+  margin-right: 10rem;
+  font-size: 1.6rem;
+} 
+
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+  section {
+    padding: 1rem;
+    margin: 0rem;
+  }
+  section p {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    font-size: 1.1rem;
+  }
+  section h2 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    font-size: 1.6rem;
+  } 
+  section img {
+    float: right;
+    margin-left: 1rem; 
+    width: 34.6875rem;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  section {
+    padding: 1rem;
+    margin: 0rem;
+  }
+  section p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  section h2 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+  } 
+  section img {
+    float: right;
+    margin-left: 1rem; 
+    width: 34.6875rem;
+  }
+}
+
+#project1 {
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.824);
+}
+  
+
+footer {
+  background-color: #c4c4c4;  
+  color: white;
+  text-align: center;
+  padding: 0;
+  height: 3.75rem; /* Adjust the height value to decrease the height */
+  position: fixed;
+  bottom: 0rem;
+  width: 100%;
+}
+
+footer .social-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+footer .social-links li {
+  margin: 0rem 1.25rem;
+}
+
+footer .social-links li:first-child {
+  margin-left: 0rem;
+}
+
+footer .social-links li:last-child {
+  margin-right: 0rem;
+}
+
+footer .social-links a {
+  color: blue;
+  font-size: 1.5rem; /* Adjust the font-size value to increase the icon size */
+}
+  
+
+#searchForm {
+  display: none; /* Initially hidden */
+  position: fixed; /* Fixed position */
+  top: 3.75rem; /* Position it right under the navbar */
+  left: 0rem; /* Align it to the left */
+  width: 100%; /* Full width */
+  height: 3.125rem; /* Set the height */
+  box-shadow: 0rem 0.5rem 1rem 0rem rgba(84, 84, 84, 0.862); /* Adds a bit of shadow */
+  z-index: 30; /* This ensures that the search bar appears above other content */
+}
+
+#searchForm input[type='search'] {
+  width: 100%; /* Full width */
+  height: 3.125rem; /* Set the height */
+  border: none; /* Removes the border */
+  padding: 0rem 3.75rem; /* Adds some padding */
+  font-size: 1.25rem; /* Adjust as needed */
+  color: #000000; /* Black color */
+  background-color: rgba(217, 216, 216, 0.668); /* Gray and a bit transparent */
+}
+
+
+.search-icon {
+  padding-right: 3.125rem; /* Adjust as needed */
+}
+
+
+
+.navbar-right-and-search {
+  display: flex;
+  justify-content: flex-end; /* This will push all content to the right */
+  align-items: center; /* Vertically center aligned */
+}
+
+.search-icon {
+  display: inline-block;
+}
+
+/* Existing styles */
+.toggler-icon,
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  display: block;
+  background: #ffffff;
+  height: 2px; /* Adjust thickness here */
+  width: 24px; /* Adjust width here */
+  margin: 6px auto; /* Adjust margin for spacing */
+}
+
+
+
+
+.navbar-toggler {
+  border: none;  /* Removes border */
+  box-shadow: none;  /* Removes shadow */
+  display: none;
+  cursor: pointer;
+  background: transparent;
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 32;
+}
+
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 800px) {
+  .content-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  nav {
+    align-items: center;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-left {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-right,
+  .navbar-right a,
+  .navbar-right .dropdown {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .navbar-search .search-icon {
+    display: inline-block; 
+  }
+}
+
+
+mark {
+  background-color: rgb(201, 215, 219);
+  color: black;
+}
+
+/* Generic Sidemenu Styles */
+.sidemenu, .secondary-sidemenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: all 0.5s ease-in-out;
+  padding-top: 4rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sidemenu { left: 0; }
+.secondary-sidemenu {
+  height: 100%;
+  width: auto;  /* Automatically adjust to content width */
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 30%;  /* Adjust based on your layout */
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 4rem;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* When the second sidebar opens */
+.sidemenu-open-secondary {
+  opacity: 1;
+  visibility: visible;
+  width: auto;
+}
+
+/* Links inside sidemenu */
+.sidemenu a, .secondary-sidemenu a {
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #818181;
+  display: block;
+  transition: color 0.3s;
+}
+
+/* Hover effect for links */
+.sidemenu a:hover, .secondary-sidemenu a:hover {
+  color: #f1f1f1;
+}
+
+/* Close button styles */
+.sidemenu .closebtn, .secondary-sidemenu .closebtn {
+  position: absolute;
+  top: 0;
+  left: 0.7rem;
+  font-size: 2.25rem;
+  cursor: pointer;
+}
+
+/* Navigation item styles */
+.nav-item, .second-nav-item {
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 0.5s;
+}
+
+/* When the first sidebar is open */
+.sidemenu-open-main,
+.sidemenu-open-secondary {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidemenu-open-main .nav-item,
+.sidemenu-open-secondary .second-nav-item {
+  opacity: 1;
+}
+
+.sidemenu-open-main { width: 30%; }
